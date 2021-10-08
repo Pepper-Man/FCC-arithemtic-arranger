@@ -7,12 +7,14 @@ def main():
     print(results)
 
 
-def arithmetic_arranger(problems, getAnswers):
+def arithmetic_arranger(problems, getAnswers=False):
     arranged_problems = ""
     lineOne = ""
     lineTwo = ""
     lineThree = ""
     lineFour = ""
+    if(len(problems) > 5):
+        return "Error: Too many problems."
     for problem in problems:
         addIndex = problem.find('+')
         subIndex = problem.find('-')
